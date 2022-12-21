@@ -1,0 +1,222 @@
+/*КНОПКИ*/
+.brands-btn {
+    width: 208px;
+    height: 72px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brands-btn,
+.technic-btn {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 16px;
+    padding-right: 16px;
+    background-color: white;
+    border: 1px solid #EAEAEA;
+    border-radius: 10px;
+}
+
+.technic-btn {
+    width: 208px;
+    height: 160px;
+}
+
+.technic-btn img {
+    width: 40px;
+    position: relative;
+    left: 1%;
+    top: 30%;
+}
+
+.brands-btn:hover,
+.technic-btn:hover {
+    background-color: #949293;
+    transition: background-color 0.5s ease, color 0.2s linear;
+}
+
+.brands-btn:focus,
+.technic-btn:focus {
+    background-color: #413e3f;
+}
+
+@media (min-width: 768px) and (max-width: 1439px) {
+
+    .brands-btn,
+    .technic-btn {
+        width: 188px;
+        margin-right: 8px;
+    }
+}
+
+/*ШАПКА*/
+.slider__grad,
+.technic__grad {
+    background: linear-gradient(270deg, #FFFFFF 0%, #F8F8F8 98.61%);
+    border-top: 2px solid #D9FFF5;
+}
+
+.technic-text {
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    font-weight: 500;
+    padding-top: 16px;
+}
+
+.slider__grad-text,
+.technic__grad-text {
+    padding-left: 32px;
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7E7E82;
+    font-weight: normal;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/*СЛАЙДЕР*/
+
+.swiper-wrapper {
+    margin-bottom: 33px;
+}
+
+.brands__list,
+.technic__list {
+    margin: 16px;
+
+}
+
+@media (min-width: 768px) {
+    .slider {
+        max-width: 1440px;
+    }
+
+    .swiper-slide {
+        width: auto;
+        height: auto;
+    }
+
+    .slider__brands,
+    .slider__technic {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .brands__list,
+    .technic__list {
+        display: flex;
+        align-items: center;
+        position: relative;
+        gap: 16px;
+        flex-flow: wrap;
+        max-height: 170px;
+        overflow: hidden;
+        margin: 24px 32px 24px 32px;
+        transition: all 2s ease;
+        background: #f8f8f8;
+    }
+
+}
+
+@media (min-width: 1120px) {
+    .swiper-slide {
+        margin-right: 16px;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+    .slider-blur::after {
+        content: "";
+        width: 24px;
+        height: 81px;
+        position: absolute;
+        top: 10px;
+        right: 0px;
+        background: linear-gradient(to left, rgb(255, 255, 255) 0%, transparent 100%);
+        z-index: 10;
+    }
+}
+
+/*ПАГИНАЦИЯ*/
+.slider__brands .swiper-pagination {
+    top: 104px;
+}
+
+.slider__technic .swiper-pagination {
+    top: 192px;
+}
+
+.slider__order .swiper-pagination {
+    top: 230px;
+}
+
+.swiper-pagination-bullet {
+    background-color: #a5a5a5;
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-pagination-bullet:hover {
+    transform: scale(1.5);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #B5B6BC;
+}
+
+.showmore,
+.showmore-technic {
+    display: none;
+}
+
+@media (min-width: 768px) {
+    .swiper-pagination {
+        display: none;
+    }
+
+    .showmore,
+    .showmore-technic {
+        position: relative;
+        font-family: 'TT Lakes';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: #1B1C21;
+        display: flex;
+        gap: 17px;
+        width: 150px;
+        border: none;
+        background-color: #f8f8f8;
+        margin-left: 32px;
+        text-align: justify;
+    }
+
+    .showmore img,
+    .showmore-technic img {
+        float: left;
+        position: relative;
+        top: 5px;
+        transition: all 0.6s;
+    }
+
+    .active .brands__list,
+    .active .technic__list {
+        max-height: 100vh;
+    }
+
+    .active .showmore img,
+    .active .showmore-technic img {
+        transition: all 0.6s;
+        transform: rotate(180deg);
+    }
+}

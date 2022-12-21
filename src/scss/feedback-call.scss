@@ -1,0 +1,210 @@
+/*КНОПКИ*/
+
+.call__btn-model,
+.feedback__btn-model {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: #ff3e79;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 40px;
+}
+
+.call__btn-model:hover,
+.feedback__btn-model:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+.send-btn {
+    width: 119px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    border-radius: 20px;
+    background-color: #FF3E79;
+}
+
+.send-btn:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+@media (min-width: 536px) {
+
+    .call__btn-model,
+    .feedback__btn-model {
+        position: absolute;
+        left: -72px;
+    }
+
+    .send-btn {
+        position: relative;
+        left: 275px;
+    }
+}
+
+@media (max-width: 536px) {
+    .send-btn {
+        position: relative;
+        left: 155px;
+    }
+}
+
+/*МОДАЛЬНЫЕ ОКНА*/
+
+.modal__feedback,
+.modal__call {
+    display: none;
+    height: 100vh;
+    padding: 18px 24px 32px 24px;
+    background-color: white;
+    box-shadow: 0 0 50px 1px grey;
+}
+
+@media (min-width: 536px) {
+
+    .modal__feedback,
+    .modal__call {
+        width: 440px;
+    }
+
+    .call--active,
+    .feedback--active {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 15;
+    }
+}
+
+@media (max-width: 536px) {
+
+    .modal__feedback,
+    .modal__call {
+        width: 320px;
+    }
+
+    .call--active,
+    .feedback--active {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: 0;
+        z-index: 15;
+    }
+}
+
+.send-text {
+    font-family: 'TT Lakes';
+    font-size: 12px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.feedback__form,
+.call__form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form__border {
+    border: none;
+    padding: 0;
+    position: relative;
+}
+
+.form__title {
+    font-family: 'TT Lakes';
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    font-weight: bold;
+    padding-bottom: 24px;
+}
+
+.form__title::before {
+    position: absolute;
+    left: -26px;
+    content: "";
+    width: 4px;
+    height: 40px;
+    background-color: #41f6d7;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+.form__text {
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E7E82;
+}
+
+.form__input {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+}
+
+input:focus,
+textarea:focus {
+    border-color: #FF3E79;
+}
+
+input:hover,
+textarea:hover {
+    border-color: #FF3E79;
+}
+
+.name,
+.tel,
+.email,
+.call-tel {
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    height: 48px;
+    outline: none;
+    box-shadow: none;
+    padding: 16px;
+}
+
+.call-tel {
+    width: 100%;
+}
+
+.message {
+    height: 118px;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    padding: 16px;
+    outline: none;
+}
+
+.pers {
+    text-decoration: none;
+    color: #FF3E79;
+}
+
+.pers:hover {
+    text-decoration: underline;
+}

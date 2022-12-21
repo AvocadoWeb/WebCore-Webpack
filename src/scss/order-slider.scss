@@ -1,0 +1,233 @@
+/*КНОПКИ*/
+
+.order-btn {
+    width: 119px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: none;
+    border-radius: 20px;
+    background-color: #FF3E79;
+}
+
+.order-btn:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+.order-text {
+    font-family: 'TT Lakes';
+    font-size: 12px;
+    line-height: 24px;
+    text-align: right;
+    letter-spacing: -0.15px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .order-btn {
+        position: absolute;
+        bottom: 16px;
+        left: 116px;
+    }
+}
+
+/*ШАПКА*/
+
+.order__grad {
+    background: linear-gradient(270deg, #FFFFFF 0%, #F8F8F8 98.61%);
+    border-top: 2px solid #D9FFF5;
+}
+
+.order__grad-text {
+    padding-left: 32px;
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    color: #7E7E82;
+    font-weight: normal;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/*КОНТЕНТ*/
+
+.order__table-text,
+.price-title {
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E7E82;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+}
+
+.price-about {
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+}
+
+@media (max-width: 767px) {
+    .order__table {
+        display: none;
+    }
+
+    .order__list {
+        margin: 16px 8px;
+        margin-bottom: 50px;
+        gap: 16px;
+    }
+
+    .list-price {
+        position: static;
+    }
+
+    .price-container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        gap: 16px;
+        width: 228px;
+        height: 166px;
+        background-color: white;
+        border: 1px solid #EAEAEA;
+        border-radius: 10px;
+        padding: 16px;
+    }
+
+    .price {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .swiper-pagination {
+        top: 230px;
+    }
+}
+
+@media (min-width: 768px) {
+    .order__table {
+        margin-top: 31px;
+        margin-left: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .order__list {
+        margin: 24px;
+        display: flex;
+        flex-direction: column;
+        background-color: #FFFFFF;
+        border-radius: 6px;
+        width: auto;
+    }
+
+    .price-container {
+        display: flex;
+        margin: 23px 16px 23px 16px;
+    }
+
+    .price {
+        display: flex;
+        align-items: center;
+    }
+
+    .price.service-block {
+        flex-basis: 70%;
+
+    }
+
+    .price.coin-block {
+        flex-basis: 20%;
+
+    }
+
+    .price.time-block {
+        flex-basis: 18%;
+    }
+
+    .price-title {
+        display: none;
+    }
+
+    .rem {
+        flex-basis: 70%;
+    }
+
+    .coin {
+        flex-basis: 20%;
+    }
+
+    .time {
+        flex-basis: 42%;
+    }
+}
+
+@media (min-width: 1440px) {
+    .price.service-block {
+        flex-basis: 70%;
+
+    }
+
+    .price.coin-block {
+        flex-basis: 20%;
+
+    }
+
+    .price.time-block {
+        flex-basis: 22%;
+    }
+}
+
+/*ПОДВАЛ*/
+
+.offer__block {
+    margin-left: 16px;
+    margin-right: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    max-width: 421px;
+}
+
+@media (min-width: 768px) {
+    .offer__block {
+        margin-left: 24px;
+    }
+}
+
+.offer__text {
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #1B1C21;
+}
+
+.offer__link {
+    font-family: 'TT Lakes';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: #1B1C21;
+    font-weight: bold;
+}
+
+.offer__link:hover {
+    color: red;
+}
+
+.offer-img {
+    padding-left: 9px;
+}

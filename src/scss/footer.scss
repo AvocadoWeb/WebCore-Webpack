@@ -1,0 +1,41 @@
+.footer {
+    display: flex;
+    background-color: #f8f8f8;
+    margin-top: 35px;
+    padding: 16px 16px 19px 16px;
+    border-top: 1px #d9fff5 solid;
+}
+
+@media (max-width: 767px) {
+    .footer {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer {
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 16px;
+    }
+
+    .apesong {
+        text-align: left;
+    }
+
+    .information {
+        text-align: right;
+        flex-basis: 33%;
+    }
+}
+
+.footer__text {
+    font-family: 'TT Lakes';
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #7E7E82;
+    mix-blend-mode: normal;
+    opacity: 0.72;
+}
